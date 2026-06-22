@@ -1,0 +1,261 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    background-color: #f4f7f6; /* Lighter, softer background */
+    color: #333; /* Darker text for better readability */
+    line-height: 1.6;
+}
+
+/* Main Container Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    border-radius: 8px; /* Slightly rounded corners */
+    overflow: hidden; /* Ensures content stays within bounds */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Slightly wider sidebar */
+    background-color: #33835b; /* Dark blue-grey */
+    color: #ecf0f1; /* Light text */
+    padding: 25px 20px; /* More padding */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow for separation */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 24px; /* Larger heading */
+    margin-bottom: 30px; /* More space below heading */
+    text-align: center;
+    color: #fff; /* White color for heading */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    padding-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1; /* Allows list to take available space */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Reduced vertical margin */
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px; /* More padding for clickable area */
+    border-radius: 6px; /* Slightly more rounded */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active { /* Added active state */
+    background-color: #7894ad; /* Darker hover */
+    color: #ffffff; /* White text on hover */
+    transform: translateX(5px); /* Slight movement on hover */
+}
+
+/* Content Area Styles */
+.content {
+    flex: 1;
+    padding: 30px 40px; /* More horizontal padding */
+    background-color: #f1f1f1; /* Clean white background for content */
+    border-radius: 0 8px 8px 0; /* Rounded only on right side */
+    overflow-y: auto; /* Enable scrolling for long content */
+}
+
+/* Headings in Content */
+h1, h2 {
+    color: #2c3e50; /* Consistent dark blue-grey */
+    margin-bottom: 25px; /* More space below headings */
+    border-bottom: 2px solid #e0e0e0; /* Subtle underline */
+    padding-bottom: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* More prominent shadow for tables */
+    border-radius: 8px; /* Rounded corners for tables */
+    overflow: hidden; /* Ensures rounded corners apply to content */
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px; /* More padding in cells */
+    border: 1px solid #e0e0e0; /* Lighter border color */
+    text-align: left;
+    vertical-align: middle;
+}
+
+table th {
+    background-color: #f0f2f5; /* Light grey header */
+    color: #555; /* Darker text for headers */
+    font-weight: 600; /* Slightly bolder headers */
+    text-transform: uppercase; /* Uppercase headers */
+    font-size: 14px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for readability */
+}
+
+table tr:hover {
+    background-color: #eef2f7; /* Highlight row on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    max-width: 600px; /* Limit form width */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="date"],
+form select {
+    width: calc(100% - 24px); /* Adjust for padding */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus,
+form select:focus {
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+form button[type="submit"] {
+    background-color: #648d72; /* Primary button color */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Action Links/Buttons */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.action-links a {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    color: #333;
+    font-size: 14px;
+}
+
+.action-links a:hover {
+    background-color: #dee2e6;
+    text-decoration: none;
+}
+
+/* Add Button/Link */
+.add-button {
+    display: inline-block;
+    background-color: #28a745; /* Green for add */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments (Basic) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px 8px 0 0;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar ul li {
+        margin: 5px 10px;
+    }
+
+    .sidebar ul li a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 20px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
